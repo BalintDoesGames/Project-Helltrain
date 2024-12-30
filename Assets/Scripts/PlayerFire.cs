@@ -39,4 +39,5 @@ public class PlayerFire : MonoBehaviour
             rb.velocity = direction * shootForce;
         }
     }
+
 }
