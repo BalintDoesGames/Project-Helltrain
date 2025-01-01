@@ -15,12 +15,12 @@ public class PlayerFire : MonoBehaviour
         // Shoot when the left mouse button is pressed
         if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
         {
-            ShootProjectile();
+            PrimaryFire();
             nextFireTime = Time.time + fireRate;  // Prevent shooting too often
         }
     }
 
-    void ShootProjectile()
+    void PrimaryFire()
     {
         // Get the mouse position in world space
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -39,5 +39,7 @@ public class PlayerFire : MonoBehaviour
             rb.velocity = direction * shootForce;
         }
     }
+
+    
 
 }
